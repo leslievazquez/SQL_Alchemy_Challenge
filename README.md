@@ -48,7 +48,17 @@ Use Python and SQLAlchemy to do basic climate analysis and data exploration of y
   - Use the average temperature as the bar height.
   - Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
  
-<img width="300" height="600"  src="https://github.com/leslievazquez/SQL_Alchemy_Challenge/blob/main/Figures/Average%20Temp.png"> 
+<img width="230" height="500"  src="https://github.com/leslievazquez/SQL_Alchemy_Challenge/blob/main/Figures/Average%20Temp.png"> 
+
+#### Daily Rainfall Average
+- Calculate the rainfall per weather station using the previous year's matching dates.
+- Calculate the `daily normals`. Normals are the averages for the min, avg, and max temperatures.
+- Use the function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Be sure to use all historic TOBS that match that date string.
+- Create a list of dates for your trip in the format `%m-%d`. Use the `daily_normals` function to calculate the normals for each date string and append the results to a list.
+- Load the list of `daily normals` into a Pandas DataFrame and set the index equal to the date.
+- Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
+
+<img width="500" height="400" src="https://github.com/leslievazquez/SQL_Alchemy_Challenge/blob/main/Figures/Plot%20Daily%20Normals.png">
 
 ### Step 2 - Climate App
 Design a Flask API based on the queries that you have just developed. Use Flask to create your routes.
