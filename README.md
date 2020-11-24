@@ -41,7 +41,18 @@ Use Python and SQLAlchemy to do basic climate analysis and data exploration of y
 
 <img width="600" height="400"  src="https://github.com/leslievazquez/SQL_Alchemy_Challenge/blob/main/Figures/tobsCountHistogram.png">
 
-#### Temperature Analysis
+#### Temperature Analysis I
+- Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
+- Use SQLAlchemy or Pandas's read_csv() to perform this portion.
+- Identify the average temperature in June at all stations across all available years in the dataset. Do the same for December temperature.
+- Use the t-test to determine whether the difference in the means, if any, is statistically significant. Will you use a paired t-test, or an unpaired t-test? Why?
+
+*An unpaired T-Test would be more appropriate to analyze this data because the data of June and December are independent. Also, this data is considered ex-post facto. Therefore, repeated measures for the same dates were not collected as seen in paired T-Test.*
+
+*If the null hypothesis stated that there is a meaningful difference in the temperature in Hawaii in the months of June and December, then one would have to reject this null hypothesis because the pvalue is 0.0003.* 
+
+
+#### Temperature Analysis II
 - Use the function called `calc_temps`. It will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
 - Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e., use "2017-01-01" if your trip start date was "2018-01-01").
 - Plot the min, avg, and max temperature from your previous query as a bar chart.
